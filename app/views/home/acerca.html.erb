@@ -1,0 +1,51 @@
+<div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                  <span><%= image_tag("notepad_banner.jpg") %>
+                                      <%= image_tag "logo.jpg", :width => 500, :height => 121 %></span>
+                </div>
+            </div>
+
+            <div id="leftcolumnwrap">
+              <div id="leftcolumn">
+                    <div id='cssmenu'>
+                      <ul>
+                        <% if logged_in? %>
+                            <li>
+                              <p>Hola de nuevo, <%= current_user.username %></p>
+							</li>
+                        <% else %>
+                              <li>
+								<p><%= link_to "Registrate", signup_path %></p>
+							  </li>
+                              <li>
+								<p><%= link_to "Login", login_path %></p>
+							  </li>
+                        <% end %>
+
+
+                         <li> <p><%= link_to "RECETAS", receta_path %></p></li>
+                        <li><p><a href='#'>Contacto</a></p></li>
+                        <li> <p> <%= link_to "Principal<<", root_path %></p></li>
+                        <br>
+                      </ul>
+                    </div>
+              </div>
+             </div>
+
+            <div id="contentwrap">
+                <div id="content">
+                    <p>
+
+                      Esta web esta hecha en Rails 3.
+
+                    </p>
+                </div>
+            </div>
+
+            <div id="footerwrap">
+                  <div id="footer">
+                    <%= image_tag "footer_banner.png", :width => 1000, :height => 40 %>
+                  </div>
+            </div>
+</div>

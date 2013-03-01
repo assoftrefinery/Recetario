@@ -1,0 +1,49 @@
+<%= form_for @user do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :username , "Usuari@" %><br /> <br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :email, "Correo" %><br />            <br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :password %><br />                         <br />
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.label :password_confirmation, "Confirmar Password" %><br /><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p><%= f.submit (@user.new_record? ? "Entrar" : "Update") %></p>
+<% end %>
+
+<!--
+<form class="form">
+
+    <p class="name">
+        <input type="text" name="name" id="name" />
+        <label for="name">Name</label>
+    </p>
+
+    <p class="email">
+        <input type="text" name="email" id="email" />
+        <label for="email">E-mail</label>
+    </p>
+
+    <p class="web">
+        <input type="text" name="web" id="web" />
+        <label for="web">Website</label>
+    </p>
+
+    <p class="text">
+        <textarea name="text"></textarea>
+    </p>
+
+    <p class="submit">
+        <input type="submit" value="Send" />
+    </p>
+
+</form>
+       -->

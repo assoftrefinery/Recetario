@@ -1,0 +1,58 @@
+<div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                  <span><%= image_tag("notepad_banner.jpg") %>
+                                      <%= image_tag "logo.jpg", :width => 500, :height => 121 %></span>
+                </div>
+            </div>
+
+            <div id="leftcolumnwrap">
+              <div id="leftcolumn">
+                    <div id='cssmenu'>
+                      <ul>
+                        <% if logged_in? %>
+                            <li> 
+							    <p>Hola de nuevo, <%= current_user.username %></p>
+							</li>
+                            <li>
+                           		<p><%= link_to "Salir", logout_path %></p>
+                           	</li>
+
+                        <% else %>
+                              <li> 
+								<p><%= link_to "Registrate", signup_path %></p>
+							  </li>
+                              <li> 
+								<p><%= link_to "Login", login_path %></p>
+							  </li>
+                        <% end %>
+
+
+                         <li> <p><%= link_to "RECETAS", receta_path %></p></li>
+                         <li><p><a href="home/acerca">Acerca de...</a></p></li>
+                        <li><p><a href='#'>Contacto</a></p></li>
+                        <br>
+
+
+                      </ul>
+                    </div>
+              </div>
+             </div>
+
+            <div id="contentwrap">
+                <div id="content">
+                    <p>Welcome
+
+                    Here at CSSPortal, we have gathered as much information as possible to try and help you learn CSS and improve your web design skills. At this site, you'll find a range of quality resources all geared towards CSS, if you're looking for a new design for your website, then please check out our range of CSS Templates or if you would like to design your own site, you may wish to check out some software to help, go to CSS Software for some great programs. Also at CSSPortal, you'll find all the CSS Properties, CSS Books and a nice collection of CSS examples.
+
+                    CSSPortal also encourages you to choose good web hosting for your site. Remember visitors are not always patient, especially when it comes to page loading. For reference, you can visit web hosting reviews online.
+                    </p>
+                </div>
+            </div>
+
+            <div id="footerwrap">
+                  <div id="footer">
+                    <%= image_tag "footer_banner.png", :width => 1000, :height => 40 %>
+                  </div>
+            </div>
+</div>

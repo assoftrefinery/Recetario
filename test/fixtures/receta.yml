@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  autor: MyString
+  nombre: MyString
+  ingredientes: MyText
+  preparacion: MyText
+  inventor: MyString
+  user_id: 1
+
+two:
+  autor: MyString
+  nombre: MyString
+  ingredientes: MyText
+  preparacion: MyText
+  inventor: MyString
+  user_id: 1

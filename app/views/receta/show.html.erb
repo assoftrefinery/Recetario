@@ -1,0 +1,99 @@
+<div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                  <span><%= image_tag("notepad_banner.jpg") %>
+                                      <%= image_tag "logo.jpg", :width => 500, :height => 121 %></span>
+                </div>
+            </div>
+
+            <div id="leftcolumnwrap">
+              <div id="leftcolumn">
+                    <div id='cssmenu'>
+                      <ul>
+                        <% if logged_in? %>
+                            <li>
+                              <p><%= link_to 'Editar', edit_recetum_path(@recetum) %> </p>
+							</li>
+                            <li>
+                           		<p><%= link_to 'Atras<<', receta_path %></p>
+                           	</li>
+                        <% else %>
+                              <li>
+								<p><%= link_to 'Atras<<', receta_path %></p>
+							  </li>
+                        <% end %>
+                      </ul>
+                    </div>
+              </div>
+             </div>
+
+            <div id="contentwrap">
+                <div id="content">
+                  <p id="notice"><%= notice %></p>
+
+                  <p>
+                    <b>Autor:</b>
+                    <%= @recetum.autor%>
+                  </p>
+
+                  <p>
+                    <b>Nombre:</b>
+                    <%= @recetum.nombre %>
+                  </p>
+
+                  <p>
+                    <b>Ingredientes:</b>
+                    <%= @recetum.ingredientes %>
+                  </p>
+
+                  <p>
+                    <b>Preparacion:</b>
+                    <%= @recetum.preparacion %>
+                  </p>
+
+                  <p>
+                    <b>Inventor:</b>
+                    <%= @recetum.inventor %>
+                  </p>
+                </div>
+
+			<div id="content">
+								<p>Comentarios</p>
+								<% @comentarios.each do |comentario| %>              
+								<%= comentario.cuerpo %>    
+									<%= form_for [@receta, comentarios.new] do |f| %>
+										<%= f.text_area :cuerpo %>
+										<div class="actions">
+											<%= f.submit "Add comentario" %>
+										</div>
+									<% end %>                                             
+																			
+								<% end %>
+			</div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="footerwrap">
+                  <div id="footer">
+                    <%= image_tag "footer_banner.png", :width => 1000, :height => 40 %>
+                  </div>
+            </div>
+</div>

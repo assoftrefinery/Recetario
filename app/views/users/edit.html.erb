@@ -1,0 +1,33 @@
+<% title "Actualizar Perfil" %>
+
+<div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+                  <span><%= image_tag("notepad_banner.jpg") %>
+                                      <%= image_tag "logo.jpg", :width => 500, :height => 121 %></span>
+                </div>
+            </div>
+
+            <div id="leftcolumnwrap">
+              <div id="leftcolumn">
+                    <div id='cssmenu'>
+                      <ul>                     
+                         <li><a href='#'><span>Link</span></a></li>
+                        <li> <p> <%= link_to "Principal<<", root_path %></p></li>
+                      </ul>
+                    </div>
+              </div>
+             </div>
+
+            <div id="contentwrap">
+                <div id="content">
+                    <%= render 'form' %>
+                </div>
+            </div>
+
+            <div id="footerwrap">
+                  <div id="footer">
+                    <%= image_tag "footer_banner.png", :width => 1000, :height => 40 %>
+                  </div>
+            </div>
+</div>

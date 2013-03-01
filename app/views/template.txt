@@ -1,0 +1,30 @@
+<div id="wrapper">
+            <div id="headerwrap">
+                <div id="header">
+					<span><img src="notepad_banner.jpg">
+					<img src="logo.jpg" width="500" height="121" align="center"></span>
+                </div>
+            </div>
+
+            <div id="leftcolumnwrap">
+              <div id="leftcolumn">
+                    <div id='cssmenu'>
+                      <ul>                     
+                         <li><a href='#'><span>Link</span></a></li>
+                      </ul>
+                    </div>
+              </div>
+             </div>
+
+            <div id="contentwrap">
+                <div id="content">
+                    <p> LOREM IPSUM </p>
+                </div>
+            </div>
+
+            <div id="footerwrap">
+                  <div id="footer">
+                       <img src="footer_banner.png" width="1000" height="40" align="center">
+                  </div>
+            </div>
+</div>
