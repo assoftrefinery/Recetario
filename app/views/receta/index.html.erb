@@ -32,12 +32,12 @@
 
                             <table>
                               <tr>
-                                <th>Autor</th>
-                                <th>Nombre</th>
-                                <th>Ingredientes</th>
-                                <th>Preparacion</th>
-                                <th>Inventor</th>
-                                <th>User</th>
+                                <th><p>Autor</p></th>
+                                <th><p>Nombre</p></th>
+                                <th><p>Ingredientes</p></th>
+                                <th><p>Preparacion</p></th>
+                                <th><p>Inventor</p></th>
+                                <th><p>User</p></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>
@@ -50,19 +50,19 @@
 
                                   <tr>
 
-                                    <td><%= recetum.autor %></td>
-                                    <td><%= recetum.nombre %></td>
-                                    <td><%= recetum.ingredientes %></td>
-                                    <td><%= recetum.preparacion %></td>
-                                    <td><%= recetum.inventor %></td>
-                                    <td><%= recetum.user_id %></td>
+                                    <td><p><%= recetum.autor %></p></td>
+                                    <td><p><%= recetum.nombre %></p></td>
+                                    <td><p><%= recetum.ingredientes %></p></td>
+                                    <td><p><%= recetum.preparacion %></p></td>
+                                    <td><p><%= recetum.inventor %></p></td>
+                                    <td><p><%= recetum.user_id %></p></td>
 
                                     <td><%= link_to image_tag("eye.png"), recetum %></td>
 
                                     <% if logged_in? %>
                                     <% if current_user.id == recetum.user_id %>
-                                    <td><%= link_to  image_tag("application_edit.png"), edit_recetum_path(recetum) %></td>
-                                    <td><%= link_to  image_tag("delete.png"), recetum, method: :delete, data: { confirm: 'Seguro que desea borrar la receta?' } %></td>
+                                    <td><p><%= link_to  image_tag("application_edit.png"), edit_recetum_path(recetum) %></p></td>
+                                    <td><p><%= link_to  image_tag("delete.png"), recetum, method: :delete, data: { confirm: 'Seguro que desea borrar la receta?' } %></p></td>
                                     <% end %>
                                         <% end %>
 
